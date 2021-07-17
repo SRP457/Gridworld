@@ -23,8 +23,8 @@ pip install -r requirements.txt
 -----------------
 ## Running the App
 1. Clone or download the repository
-2. Navigate to the **Streamlit** folder in your system
+2. Navigate to the **Gridworld** folder in your system
 3. Execute the following command and open the local url link given:
 ```
-streamlit run Regression.py
+streamlit run main.py
 ```
