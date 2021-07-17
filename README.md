@@ -2,7 +2,7 @@
 ******************
 
 # Gridworld
-![alt text](https://github.com/SRP457/Streamlit/blob/main/Demo.PNG?raw=true)
+![alt text](https://github.com/SRP457/Gridworld/blob/main/demo.PNG?raw=true)
 
 [Streamlit](https://docs.streamlit.io/en/stable/) is an open-source Python library that makes it easy to create and share beautiful, custom web apps for machine learning and data science. In just a few minutes you can build and deploy powerful data apps <br> <br>
 This is a streamlit app implementing value iteration in gridworld.
