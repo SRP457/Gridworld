@@ -11,10 +11,9 @@ This is a streamlit app implementing value iteration in gridworld.
 ## Requirements
 The libraries used are shown below:
 ```
-matplotlib==3.2.2
 streamlit==0.84.1
 numpy==1.18.5
-scikit_learn==0.24.2
+matplotlib==3.2.2
 ```
 Use the following command to install all required packages:
 ```
