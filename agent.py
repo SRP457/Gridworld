@@ -3,7 +3,7 @@ import random
 
 
 class Agent():
-	def __init__(self, reward, episodes=1, maxsteps=10, lr=0.7, discount=0.99, explore=1, decay=0.01, minrate=0.01):
+	def __init__(self, reward, episodes=1, maxsteps=10, lr=0.7, discount=0.99, explore=1, decay=0.01, minrate=0.01, random_start=False):
 		size = reward.shape[0]
 		self.reward = reward
 		self.qtable = np.zeros((size**2, 4))
@@ -14,6 +14,7 @@ class Agent():
 		self.exploration_rate = explore
 		self.decay_rate = decay
 		self.min_exploration_rate = minrate
+		self.random_start = random_start
 
 
 	def get_index(self, current_state):
@@ -57,9 +58,16 @@ class Agent():
 
 		for episode in range(self.episodes):
 			path.append([])
-
-			current_state = np.array([0, 0])
 			rewards = 0
+
+			if self.random_start:
+				size = self.reward.shape[0]
+				current_state = np.random.randint(low=0, high=size, size=2)
+
+				while self.reward[current_state[0], current_state[1]] != -1:
+					current_state = np.random.randint(low=0, high=size, size=2)
+			else:
+				current_state = np.array([0, 0])
 
 			for step in range(self.maxsteps):
 				index = self.get_index(current_state)
